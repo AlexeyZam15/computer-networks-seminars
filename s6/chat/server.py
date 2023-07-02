@@ -75,3 +75,5 @@ try:
 # обработка ошибки чтобы не выключался сервер
 except ConnectionResetError:
     pass
+finally:
+    server.close()
