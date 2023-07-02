@@ -67,8 +67,8 @@ def main():
     nickname = ''
     try:
         nickname = input("Choose your nickname: ")
-    # Обработка ошибки и выход из программы
-    except EOFError:
+    # Обработка ошибок и выход из программы
+    except:
         exit()
     # Создание объекта с передачей IP и порта сервера и имени пользователя
     client = Client(('127.0.0.1', 55555), nickname)
