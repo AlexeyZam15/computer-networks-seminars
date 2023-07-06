@@ -64,6 +64,7 @@ def receive():
 
 # выход из программы
 def stop():
+    print('Выключение сервера')
     os._exit(0)
 
 
@@ -75,5 +76,7 @@ try:
 # обработка ошибки чтобы не выключался сервер
 except ConnectionResetError:
     pass
+except KeyboardInterrupt:
+    stop()
 finally:
     server.close()
